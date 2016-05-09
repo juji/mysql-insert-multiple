@@ -1,6 +1,6 @@
 {
   "name": "mysql-insert-multiple",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js Utility to generate mysql insert statement, with multiple values.",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,9 @@
   "dependencies": {
     "mysql": "^2.10.2"
   },
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/juji/mysql-insert-multiple"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juji/mysql-insert-multiple"
   },
   "devDependencies": {
     "chai": "^3.5.0"
