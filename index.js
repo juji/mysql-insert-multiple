@@ -3,7 +3,6 @@ var Transform = require('stream').Transform;
 var inherits = require('util').inherits;
 var mysql = require('mysql');
 
-
 // QueryCreator
 var QueryCreator = function(opt){
 	this.count = 0;
@@ -31,7 +30,9 @@ QueryCreator.prototype.add = function(obj){
 	
 	this.query += this.sep + '(';
 	for(var i in this.keys){
-		if( obj[this.keys[i]].string &&  obj[this.keys[i]].value)
+		if (obj[this.keys[i]] == undefined)
+			this.query += this.valsep +'null';
+		else if( obj[this.keys[i]].string && obj[this.keys[i]].value)
 			this.query += this.valsep + mysql.format( obj[this.keys[i]].string, obj[this.keys[i]].value );
 		else this.query += this.valsep + mysql.format('?', [obj[this.keys[i]]] );
 		this.valsep = ',';

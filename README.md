@@ -1,6 +1,6 @@
 # mysql-insert-multiple
 
-Utility to generate mysql insert statement, with multiple values.
+Node.js Utility to generate mysql insert statement, with multiple values.
 
 Data source can be Array of object, or streamed objects.
 
